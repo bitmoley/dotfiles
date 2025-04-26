@@ -1,6 +1,10 @@
 # Windows key as mod
 set $mod Mod4
 
+# wallpaper
+output DP-2 bg ~/wallpapers/balrog.png fill
+output eDP-1 bg ~/wallpapers/balrog.png fill
+
 # set gaps
 gaps inner 3px
 gaps outer 5px
@@ -14,6 +18,7 @@ bindsym $mod+b exec firefox
 
 # autostart programs
 exec --no-startup-id nm-applet
+exec_always --no-startup-id /usr/bin/emacs --daemon
 
 # launcher
 bindsym $mod+space exec --no-startup-id dmenu_run
@@ -98,13 +103,17 @@ input * {
 set $dell "Dell Inc. DELL S3221QS 4YDKB33"
 set $laptop "BOE 0x0791 Unknown"
 
-# wallpaper
-output DP-2 bg ~/wallpapers/balrog.png fill
-output eDP-1 bg ~/wallpapers/balrog.png fill
-
 # disable laptop monitor when docked & closed
 bindswitch lid:on output $laptop disable
 bindswitch lid:off output $laptop enable
+
+# adjust screen brightness - need aur package "light"
+bindsym $mod+Ctrl+l exec light -A 5
+bindsym $mod+Ctrl+h exec light -U 5
+
+# adjust volume
+bindsym $mod+Ctrl+k exec wpctl set-volume @DEFAULT_SINK@ 5%+
+bindsym $mod+Ctrl+j exec wpctl set-volume @DEFAULT_SINK@ 5%-
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
