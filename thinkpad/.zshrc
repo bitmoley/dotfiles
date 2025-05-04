@@ -18,7 +18,10 @@ zstyle ':vcs_info:git:*' enable git svn
 setopt prompt_subst
 PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f '
 
-# ALIASES
+### PATH ###
 
-# PATH
-export PATH=$PATH:/home/moley/.config/emacs/bin
+### ALIASES ###
+# Neovim
+alias vim='nvim'
+alias vi='nvim'
+

@@ -1,0 +1,10 @@
+theme = tokyonight_night
+
+font-family = "JetBrainsMono Nerd Font"
+
+background-opacity = 0.8
+background-blur = true
+
+shell-integration = zsh
+
+window-save-state = always

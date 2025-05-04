@@ -1,7 +1,8 @@
 # Windows key as mod
 set $mod Mod4
 
-exec --no-startup-id waybar
+# lock screen
+bindsym $mod+m exec swaylock --clock --indicator --effect-pixelate "20"
 
 # wallpaper
 output DP-2 bg ~/.config/sway/wallpapers/abstract.png fill
@@ -21,6 +22,7 @@ bindsym $mod+b exec firefox
 # autostart programs
 exec --no-startup-id nm-applet
 exec --no-startup-id autotiling
+exec --no-startup-id waybar
 
 # launcher
 bindsym $mod+space exec --no-startup-id dmenu_run

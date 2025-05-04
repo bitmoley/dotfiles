@@ -1,0 +1,181 @@
+/* Tokyo Night */
+@define-color background #000000;
+@define-color background-light #24283b;
+@define-color foreground #c0caf5;
+@define-color black #000000;
+@define-color red #f7768e;
+@define-color green #9ece6a;
+@define-color yellow #e0af68;
+@define-color blue #7aa2f7;
+@define-color magenta #bb9af7;
+@define-color cyan #7dcfff;
+@define-color white #a9b1d6;
+@define-color orange #ff9e64;
+
+/* Modules */
+@define-color bg @background;
+@define-color fg @foreground;
+@define-color ws-focused-bg @red;
+@define-color ws-focused-fg @black;
+@define-color window-bg @orange;
+@define-color window-fg @black;
+@define-color audio-bg @blue;
+@define-color audio-fg @white;
+@define-color tray-bg rgba(0,0,0,0);
+@define-color network-bg @magenta;
+@define-color network-fg @white;
+@define-color backlight-bg @yellow;
+@define-color backlight-fg @white;
+@define-color battery-bg @green;
+@define-color battery-fg @white;
+@define-color clock-bg @cyan;
+@define-color clock-bg @black;
+
+
+
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+    border-bottom: none;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar > box {
+    padding: 4px;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    background-color: transparent;
+    border-radius: 0px;
+    color: @fg;
+    border-radius: 0px;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: @ws-focused-bg;
+    color: @ws-focused-fg;
+}
+
+#workspaces button.urgent {
+    background-color: @green;
+}
+
+#mode {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    border-radius: 0px;
+    color: #ffffff;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: @clock-bg;
+    color: @clock-fg;
+}
+
+#battery {
+    background-color: @black;
+    color: @battery-fg;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#backlight {
+    background-color: @black;
+    color: @backlight-fg;
+}
+
+#network {
+    background-color: @black;
+    color: @network-fg;
+}
+
+#network.disconnected {
+    background-color: @red;
+}
+
+#pulseaudio {
+    background-color: @black;
+    color: @audio-fg;
+}
+
