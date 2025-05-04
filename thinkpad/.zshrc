@@ -25,3 +25,7 @@ PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f '
 alias vim='nvim'
 alias vi='nvim'
 
+# Zellij
+alias za='zellij attach'
+alias zl='zellij list-sessions'
+

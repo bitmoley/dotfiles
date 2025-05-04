@@ -33,5 +33,6 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 
-  vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>")
+  vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>"),
+  vim.keymap.set("n", "<leader>hh", "<cmd>vsplit<CR>", {})
 })
