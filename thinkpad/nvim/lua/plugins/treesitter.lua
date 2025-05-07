@@ -27,7 +27,7 @@ return {
                 "gitignore",
                 "c",
                 "go",
-                "norg",
+                "rust",
             },
             incremental_selection = {
                 enable = true,
