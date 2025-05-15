@@ -1,0 +1,21 @@
+Bootcamp
+Chiang
+GTD
+Hoole
+Journalling
+LSP
+Macbook
+NEOVIM
+Neovim
+Specialized
+Storyhouse
+TODO
+ThinkPad
+VSCode
+Zig
+airer
+journalling
+shithole
+todo
+todos
+checksum_v1 = 703936bda7d3b057df056f9a0660a3ce

@@ -1,0 +1,12 @@
+2025/05/15-06:21:59.969 a33 Reusing MANIFEST /home/moley/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2025/05/15-06:21:59.969 a33 Recovering log #45
+2025/05/15-06:21:59.984 a33 Reusing old log /home/moley/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000045.log 
+2025/05/15-06:27:45.035 9dd Level-0 table #50: started
+2025/05/15-06:27:45.076 9dd Level-0 table #50: 1341189 bytes OK
+2025/05/15-06:27:45.078 9dd Delete type=0 #45
+2025/05/15-06:28:13.771 9dc Compacting 1@1 + 1@2 files
+2025/05/15-06:28:13.795 9dc Generated table #51@1: 583 keys, 88254 bytes
+2025/05/15-06:28:13.796 9dc Compacted 1@1 + 1@2 files => 88254 bytes
+2025/05/15-06:28:13.797 9dc compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/05/15-06:28:13.798 9dc Delete type=2 #50
+2025/05/15-06:28:13.798 9dc Delete type=2 #47

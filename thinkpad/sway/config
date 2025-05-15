@@ -5,6 +5,7 @@ set $mod Mod4
 bindsym $mod+m exec swaylock --clock --indicator --effect-pixelate "20"
 
 # wallpaper
+output DP-1 bg ~/.config/sway/wallpapers/abstract.png fill
 output DP-2 bg ~/.config/sway/wallpapers/abstract.png fill
 output eDP-1 bg ~/.config/sway/wallpapers/abstract.png fill
 

@@ -1,0 +1,27 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "alt-q": "tab_switcher::CloseSelectedItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "workspace::ToggleLeftDock",
+      "shift f g": "buffer_search::Deploy"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      //"j j": ["workspace::SendKeystrokes", "escape"]
+    }
+  }
+]
