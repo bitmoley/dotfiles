@@ -19,6 +19,7 @@ default_border pixel 3
 # program shortcuts
 bindsym $mod+Return exec ghostty
 bindsym $mod+b exec firefox
+bindsym $mod+o exec obsidian
 
 # autostart programs
 exec --no-startup-id nm-applet
