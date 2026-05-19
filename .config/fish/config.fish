@@ -23,8 +23,12 @@ alias ppb="powerprofilesctl set balanced"
 alias ppe="powerprofilesctl set power-saver"
 alias pp="powerprofilesctl get"
 
+#distrobox
+alias db="distrobox"
+
 ### PATH VARIABLES ###
 fish_add_path ~/go/bin
+fish_add_path ~/bin
 for dir in ~/bin/*/
   fish_add_path $dir
 end

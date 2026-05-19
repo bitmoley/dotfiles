@@ -6,6 +6,9 @@ return {
     priority = 1000,
     opts = {},
   },
+  {
+    "pineapplegiant/spaceduck"
+  },
   -- lualine
   {
     'nvim-lualine/lualine.nvim',
